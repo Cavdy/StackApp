@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:stackapp/models/list_model.dart';
+import 'package:stackapp/screens/home_screen.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -7,7 +9,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
   int _currentSelect = 0;
 
   void _menuSelect(int index) {
@@ -18,16 +19,16 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> _screens = [
-      Center(child: Text("Home"),),
-      Center(child: Text("Search"),)
+    List<Widget> _screen = [
+      HomeScreen(listData: homeData),
+      Center(child: Text("Search"))
     ];
     return Scaffold(
-      body: _screens[_currentSelect],
+      body: _screen[_currentSelect],
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Color(0xFF262432),
-          textTheme: Theme.of(context).textTheme.copyWith(caption: TextStyle(color: Color(0xFF4b485b))),
+          textTheme: Theme.of(context).textTheme.copyWith(caption: TextStyle(color: Color(0xFF4b485b)))
         ),
         child: BottomNavigationBar(
           currentIndex: _currentSelect,
