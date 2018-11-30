@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:stackapp/models/list_model.dart';
 import 'package:stackapp/screens/home_screen.dart';
+import 'package:stackapp/screens/search_screen.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -21,7 +22,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     List<Widget> _screen = [
       HomeScreen(listData: homeData),
-      Center(child: Text("Search"))
+      SearchScreen(searchDetail: homeData,)
     ];
     return Scaffold(
       body: _screen[_currentSelect],
