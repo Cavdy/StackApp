@@ -4,5 +4,5 @@ A new Flutter project.
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Watch the tutorial on our YouTube page
+[documentation](https://youtu.be/FRA7nkj8up0).
